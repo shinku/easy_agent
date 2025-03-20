@@ -43,6 +43,7 @@ export class EaseAgentService extends EasyAgentBase {
 
   constructor(option: IAiClientOption) {
     super()
+    console.log("你想让我做什么？")
     this.option = option;
     this.defaultPrompt = DefaultPrompt();
     this.chatList.push(genMessage(this.defaultPrompt));

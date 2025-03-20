@@ -18,7 +18,7 @@ export class OpenaiClient extends AiClientBase {
     this.openai = new OpenAI(option);
   }
   async chat(option:ChatCompletionCreateParamsStreaming) {
-    console.log("i am thinging...");
+    console.log("      i am thinking...");
     // console.log('chating:', option.messages.slice(-1)[0].content);
     try { 
       const chatCompletion = await this.openai.chat.completions.create(option);

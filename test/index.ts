@@ -3,6 +3,15 @@ import { join } from "path";
 import { EaseAgentService } from "../src/core/EasyAgentService";
 import { IExectueAction } from "../src/core/executor";
 const keys = readFileSync(join(__dirname,'../key.txt'),{encoding: 'utf-8'});
+
+/**
+ * 在本地留一个key.txt,放置你的apikey
+ * 比如：
+ * deepseek=sk-xxxxxxx
+ * 获取apikey
+ * @param key 
+ * @returns 
+ */
 const getKey = (key)=>{
   return keys.split("\n").find(item=>{
     return item.split("=")[0] === key;

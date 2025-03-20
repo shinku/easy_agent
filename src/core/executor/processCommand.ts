@@ -1,4 +1,4 @@
-import { spawn } from "child_process";
+import { exec } from "child_process";
 import { IExectueAction } from ".";
 import { BaseExecutor } from "./BaseExecutor";
 
@@ -10,10 +10,12 @@ export class processCommand extends BaseExecutor {
         return;
       }
     }
-    const cli = spawn(option.content.split(" ")[0],option.content.split(" ").slice(0))
-    cli.stdout.on('data', (data)=>{
-      const res = Buffer.from(data).toString()
-      this.emit('data',res)
+    exec(option.content,(err,stdout,stderr)=>{
+      if(err){
+        this.emit('data',err.message)
+      }else{
+        this.emit('data',stdout)
+      }
     })
   }
 }
