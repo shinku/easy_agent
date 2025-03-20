@@ -71,7 +71,7 @@ process.stdin.on('data', (data)=>{
   const input = data.toString().trim();
   service.chat({message:input});
 })
-
+// service.on('require_input') 用于和外层进行交互
 service.on('require_input', (option)=>{
   switch(option.type) {
     case "confirm": process.stdout.write(` 是否需要执行操作？：\n${option.content}\n（yes/no）`)
