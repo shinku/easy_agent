@@ -1,6 +1,6 @@
 {
   "name": "easy_shell_agent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "nodejs ai agent",
   "main": "dist/src/index.js",
   "scripts": {
