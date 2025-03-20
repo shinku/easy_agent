@@ -1,5 +1,5 @@
 {
-  "name": "easy_agent",
+  "name": "easy_shell_agent",
   "version": "1.0.0",
   "description": "nodejs ai agent",
   "main": "dist/src/index.js",
