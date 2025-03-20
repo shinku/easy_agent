@@ -43,16 +43,16 @@ docker --version
 ```
 
 ### node模块使用
-
+安装`easy_shell_agent`包
+```npm i easy_shell_agent```
 参考
-
 ```typescript
-import { EasyAgentService } from "../src/core/EasyAgentService";
-import { IExectueAction } from "../src/core/executor";
+const as = require('easy_shell_agent');
+const {EasyAgentService} = as;
 const service = new EasyAgentService({
   type:"deepseek",
   model:"deepseek-chat",
-  apiKey:getKey('deepseek'),
+  apiKey:"xxxxxxxx"
 })
 
 process.stdin.on('data', (data)=>{
@@ -60,10 +60,9 @@ process.stdin.on('data', (data)=>{
   service.chat({message:input});
 })
 
-// 通过 require_input 事件跟EaseAgentService发生数据通信
-service.on('require_input', (option: IExectueAction)=>{
+service.on('require_input', (option)=>{
   switch(option.type) {
-    case "confirm": process.stdout.write(`  是否需要执行操作？：\n${option.content}\n（yes/no）`)
+    case "confirm": process.stdout.write(` 是否需要执行操作？：\n${option.content}\n（yes/no）`)
   }
 })
 
