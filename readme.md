@@ -47,7 +47,9 @@ docker --version
 参考
 
 ```typescript
-const service = new EaseAgentService({
+import { EasyAgentService } from "../src/core/EasyAgentService";
+import { IExectueAction } from "../src/core/executor";
+const service = new EasyAgentService({
   type:"deepseek",
   model:"deepseek-chat",
   apiKey:getKey('deepseek'),
