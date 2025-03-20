@@ -7,11 +7,13 @@
 
 ### how To use
 
-clone当前目录至本地，
-确保你已经安装了nodejs环境
++ clone当前目录至本地。
++ 确保你已经安装了nodejs环境。
++ 目录下新建 key.txt。比如deepseek的apikey放进去。例如：`deepseek=xxxxxxxx`
+
 初始化
 ```npm i```
-本地运行
+本地运行测试你就可以看到效果
 ```npm run test-dev```
 从“你想让我做什么？”开始。
 比如输入："帮我查下我的docker版本"
@@ -40,8 +42,10 @@ docker --version
 [Agent Says:] 27.5.1, build 9f9e405
 ```
 
-### 模块使用
+### node模块使用
+
 参考
+
 ```typescript
 const service = new EaseAgentService({
   type:"deepseek",

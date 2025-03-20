@@ -32,10 +32,10 @@ process.stdin.on('data', (data)=>{
 
 service.on('require_input', (option: IExectueAction)=>{
   switch(option.type) {
-    case "confirm": process.stdout.write(`是否需要执行操作？：\n${option.content}\n（yes/no）`)
+    case "confirm": process.stdout.write(`是否需要执行操作？：${option.content} （yes/no）`)
   }
 })
 
 service.on('data', (data)=>{
-  console.log('[Agent Says:]', data)
+  console.info('[Agent Says:]\n', data)
 })
