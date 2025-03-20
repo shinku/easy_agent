@@ -17,7 +17,7 @@ const getKey = (key) => {
         return item.split("=")[0] === key;
     })?.split("=")[1];
 };
-const service = new EasyAgentService_1.EaseAgentService({
+const service = new EasyAgentService_1.EasyAgentService({
     type: "deepseek",
     model: "deepseek-chat",
     apiKey: getKey('deepseek'),

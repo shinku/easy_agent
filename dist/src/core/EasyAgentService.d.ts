@@ -12,7 +12,7 @@ export interface IActiveOption {
     message: string;
     model?: string;
 }
-export declare class EaseAgentService extends EasyAgentBase {
+export declare class EasyAgentService extends EasyAgentBase {
     client: AiClientBase;
     option: IAiClientOption;
     protected defaultPrompt: string;

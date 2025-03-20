@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.EaseAgentService = exports.jsonOutPut = exports.genMessage = void 0;
+exports.EasyAgentService = exports.jsonOutPut = exports.genMessage = void 0;
 const DefaultPrompt_1 = __importDefault(require("../prompts/DefaultPrompt"));
 const IntentionPrompt_1 = __importDefault(require("../prompts/IntentionPrompt"));
 const SystemPrompt_1 = __importDefault(require("../prompts/SystemPrompt"));
@@ -26,7 +26,7 @@ const jsonOutPut = (data) => {
     return data.replace(/^```json\n/ig, "").replace(/\n```/ig, '');
 };
 exports.jsonOutPut = jsonOutPut;
-class EaseAgentService extends EasyAgentBase_1.EasyAgentBase {
+class EasyAgentService extends EasyAgentBase_1.EasyAgentBase {
     client;
     option;
     defaultPrompt;
@@ -129,5 +129,5 @@ class EaseAgentService extends EasyAgentBase_1.EasyAgentBase {
         // return await this.client.chat(option);
     }
 }
-exports.EaseAgentService = EaseAgentService;
+exports.EasyAgentService = EasyAgentService;
 //# sourceMappingURL=EasyAgentService.js.map
