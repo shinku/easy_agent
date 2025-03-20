@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-import { EaseAgentService } from "../src/core/EasyAgentService";
+import { EasyAgentService } from "../src/core/EasyAgentService";
 import { IExectueAction } from "../src/core/executor";
 const keys = readFileSync(join(__dirname,'../key.txt'),{encoding: 'utf-8'});
 
@@ -19,7 +19,7 @@ const getKey = (key)=>{
 }
 
 
-const service = new EaseAgentService({
+const service = new EasyAgentService({
   type:"deepseek",
   model:"deepseek-chat",
   apiKey:getKey('deepseek'),

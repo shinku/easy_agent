@@ -30,7 +30,7 @@ export interface IActiveOption {
 
 
 
-export class EaseAgentService extends EasyAgentBase {
+export class EasyAgentService extends EasyAgentBase {
 
   client: AiClientBase
   
